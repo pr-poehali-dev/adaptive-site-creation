@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "Register new user",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "parent_name": "Тестовый Родитель",
+        "parent_phone": "+79991234567",
+        "child_name": "Тестовый Ребенок",
+        "school": "Школа №1",
+        "grade": 5
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "id": "number",
+        "message": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
