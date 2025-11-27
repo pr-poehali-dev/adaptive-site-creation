@@ -117,26 +117,30 @@ const Index = () => {
         </div>
       )}
 
-      <section id="home" className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          <Badge className="text-lg px-6 py-2" variant="secondary">
+      <section id="home" className="container mx-auto px-4 py-20 relative overflow-hidden">
+        <div className="absolute top-10 left-10 text-9xl opacity-5 animate-float">π</div>
+        <div className="absolute bottom-20 right-20 text-9xl opacity-5 animate-float" style={{animationDelay: '1s'}}>∑</div>
+        <div className="absolute top-1/2 right-1/4 text-7xl opacity-5 animate-pulse-slow">√</div>
+        
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in relative z-10">
+          <Badge className="text-lg px-6 py-2 animate-bounce-in" variant="secondary">
             Для детей 1-7 классов
           </Badge>
           <h1 className="text-6xl md:text-7xl font-bold leading-tight">
             Кружок олимпиадной{" "}
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-pulse-slow">
               математики
             </span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up">
             Развиваем логическое мышление и готовим к олимпиадам через увлекательные задачи и соревнования
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="gap-2" onClick={() => scrollToSection("schedule")}>
+          <div className="flex flex-wrap gap-4 justify-center animate-slide-up" style={{animationDelay: '0.2s'}}>
+            <Button size="lg" className="gap-2 hover-glow" onClick={() => scrollToSection("schedule")}>
               <Icon name="Calendar" size={20} />
               Записаться на занятие
             </Button>
-            <Button size="lg" variant="outline" className="gap-2" onClick={() => scrollToSection("mathbattle")}>
+            <Button size="lg" variant="outline" className="gap-2 hover:border-primary hover:text-primary" onClick={() => scrollToSection("mathbattle")}>
               <Icon name="Trophy" size={20} />
               Участвовать в матбое
             </Button>
@@ -144,27 +148,27 @@ const Index = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mt-20">
-          <Card className="hover-scale">
+          <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.3s'}}>
             <CardHeader>
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 animate-bounce-in" style={{animationDelay: '0.5s'}}>
                 <Icon name="Monitor" size={28} className="text-primary" />
               </div>
               <CardTitle>Онлайн формат</CardTitle>
               <CardDescription>Занятия из любой точки мира через удобную платформу</CardDescription>
             </CardHeader>
           </Card>
-          <Card className="hover-scale">
+          <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.4s'}}>
             <CardHeader>
-              <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4">
+              <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-4 animate-bounce-in" style={{animationDelay: '0.6s'}}>
                 <Icon name="Users" size={28} className="text-secondary" />
               </div>
               <CardTitle>Офлайн занятия</CardTitle>
               <CardDescription>Живое общение с преподавателем и одногруппниками</CardDescription>
             </CardHeader>
           </Card>
-          <Card className="hover-scale">
+          <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.5s'}}>
             <CardHeader>
-              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 animate-bounce-in" style={{animationDelay: '0.7s'}}>
                 <Icon name="Target" size={28} className="text-accent" />
               </div>
               <CardTitle>Олимпиады</CardTitle>
@@ -174,11 +178,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="mathbattle" className="bg-gradient-to-br from-primary/5 to-accent/5 py-20">
+      <section id="mathbattle" className="bg-gradient-to-br from-primary/5 to-accent/5 py-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 text-[200px] opacity-5 animate-pulse-slow">×</div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+            <div className="flex items-center gap-4 mb-8 animate-fade-in">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center animate-bounce-in">
                 <Icon name="Swords" size={32} className="text-white" />
               </div>
               <div>
@@ -188,7 +193,7 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <Card>
+              <Card className="hover-lift animate-slide-up" style={{animationDelay: '0.1s'}}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icon name="Users" size={24} className="text-primary" />
@@ -203,7 +208,7 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover-lift animate-slide-up" style={{animationDelay: '0.2s'}}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Icon name="Target" size={24} className="text-secondary" />
@@ -219,11 +224,11 @@ const Index = () => {
               </Card>
             </div>
 
-            <Card className="bg-gradient-to-br from-primary to-accent text-white">
+            <Card className="bg-gradient-to-br from-primary to-accent text-white animate-slide-up hover-glow" style={{animationDelay: '0.3s'}}>
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Записаться на матбой</h3>
                 <p className="mb-6 opacity-90">Следующий матбой: 15 декабря в 10:00</p>
-                <Button size="lg" variant="secondary" className="gap-2" onClick={() => setShowProfile(true)}>
+                <Button size="lg" variant="secondary" className="gap-2 hover-scale" onClick={() => setShowProfile(true)}>
                   <Icon name="UserPlus" size={20} />
                   Зарегистрироваться
                 </Button>
@@ -247,37 +252,37 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <Card className="hover-scale">
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.1s'}}>
                 <CardHeader>
-                  <div className="text-3xl font-bold text-primary mb-2">1-3</div>
+                  <div className="text-3xl font-bold text-primary mb-2 animate-bounce-in" style={{animationDelay: '0.3s'}}>1-3</div>
                   <CardTitle>Младшие классы</CardTitle>
                   <CardDescription>Базовая логика и арифметика</CardDescription>
                 </CardHeader>
               </Card>
-              <Card className="hover-scale">
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.2s'}}>
                 <CardHeader>
-                  <div className="text-3xl font-bold text-secondary mb-2">4-5</div>
+                  <div className="text-3xl font-bold text-secondary mb-2 animate-bounce-in" style={{animationDelay: '0.4s'}}>4-5</div>
                   <CardTitle>Средние классы</CardTitle>
                   <CardDescription>Геометрия и комбинаторика</CardDescription>
                 </CardHeader>
               </Card>
-              <Card className="hover-scale">
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.3s'}}>
                 <CardHeader>
-                  <div className="text-3xl font-bold text-accent mb-2">6-7</div>
+                  <div className="text-3xl font-bold text-accent mb-2 animate-bounce-in" style={{animationDelay: '0.5s'}}>6-7</div>
                   <CardTitle>Старшие классы</CardTitle>
                   <CardDescription>Сложные олимпиадные задачи</CardDescription>
                 </CardHeader>
               </Card>
             </div>
 
-            <Card>
+            <Card className="hover-lift animate-slide-up" style={{animationDelay: '0.4s'}}>
               <CardHeader>
                 <CardTitle>Как записаться на олимпиаду</CardTitle>
                 <CardDescription>Участие открыто для всех зарегистрированных пользователей</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="flex items-start gap-4 animate-slide-up" style={{animationDelay: '0.5s'}}>
+                  <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold flex-shrink-0 animate-pulse-slow">
                     1
                   </div>
                   <div>
@@ -285,8 +290,8 @@ const Index = () => {
                     <p className="text-sm text-muted-foreground">Заполните форму в личном кабинете</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="flex items-start gap-4 animate-slide-up" style={{animationDelay: '0.6s'}}>
+                  <div className="w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-bold flex-shrink-0 animate-pulse-slow" style={{animationDelay: '0.5s'}}>
                     2
                   </div>
                   <div>
@@ -294,8 +299,8 @@ const Index = () => {
                     <p className="text-sm text-muted-foreground">Олимпиады проводятся ежемесячно</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold flex-shrink-0">
+                <div className="flex items-start gap-4 animate-slide-up" style={{animationDelay: '0.7s'}}>
+                  <div className="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold flex-shrink-0 animate-pulse-slow" style={{animationDelay: '1s'}}>
                     3
                   </div>
                   <div>
@@ -303,7 +308,7 @@ const Index = () => {
                     <p className="text-sm text-muted-foreground">Получите сертификат и призы</p>
                   </div>
                 </div>
-                <Button className="w-full mt-6" size="lg" onClick={() => setShowProfile(true)}>
+                <Button className="w-full mt-6 hover-glow" size="lg" onClick={() => setShowProfile(true)}>
                   Записаться на олимпиаду
                 </Button>
               </CardContent>
@@ -491,8 +496,10 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="hover-scale">
-                <div className="h-48 bg-gradient-to-br from-primary to-accent rounded-t-xl"></div>
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.1s'}}>
+                <div className="h-48 bg-gradient-to-br from-primary to-accent rounded-t-xl relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center text-white text-6xl opacity-20 animate-pulse-slow">🏆</div>
+                </div>
                 <CardHeader>
                   <div className="text-sm text-muted-foreground mb-2">25 ноября 2024</div>
                   <CardTitle>Победа на городской олимпиаде</CardTitle>
@@ -502,8 +509,10 @@ const Index = () => {
                 </CardHeader>
               </Card>
 
-              <Card className="hover-scale">
-                <div className="h-48 bg-gradient-to-br from-secondary to-primary rounded-t-xl"></div>
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.2s'}}>
+                <div className="h-48 bg-gradient-to-br from-secondary to-primary rounded-t-xl relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center text-white text-6xl opacity-20 animate-pulse-slow" style={{animationDelay: '0.5s'}}>💻</div>
+                </div>
                 <CardHeader>
                   <div className="text-sm text-muted-foreground mb-2">20 ноября 2024</div>
                   <CardTitle>Новый формат занятий</CardTitle>
@@ -513,8 +522,10 @@ const Index = () => {
                 </CardHeader>
               </Card>
 
-              <Card className="hover-scale">
-                <div className="h-48 bg-gradient-to-br from-accent to-secondary rounded-t-xl"></div>
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.3s'}}>
+                <div className="h-48 bg-gradient-to-br from-accent to-secondary rounded-t-xl relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center text-white text-6xl opacity-20 animate-pulse-slow" style={{animationDelay: '1s'}}>🎓</div>
+                </div>
                 <CardHeader>
                   <div className="text-sm text-muted-foreground mb-2">15 ноября 2024</div>
                   <CardTitle>Открытие нового класса</CardTitle>
@@ -537,55 +548,55 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-4 gap-6">
-              <Card className="hover-scale">
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.1s'}}>
                 <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-t-xl flex items-center justify-center">
-                  <span className="text-6xl">🎯</span>
+                  <span className="text-6xl animate-bounce-in" style={{animationDelay: '0.3s'}}>🎯</span>
                 </div>
                 <CardHeader>
                   <CardTitle className="text-lg">Стикеры ЛОМ</CardTitle>
                   <div className="text-2xl font-bold text-primary">300₽</div>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full" variant="outline">Заказать</Button>
+                  <Button className="w-full hover-glow" variant="outline">Заказать</Button>
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale">
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.2s'}}>
                 <div className="h-48 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-t-xl flex items-center justify-center">
-                  <span className="text-6xl">☕</span>
+                  <span className="text-6xl animate-bounce-in" style={{animationDelay: '0.4s'}}>☕</span>
                 </div>
                 <CardHeader>
                   <CardTitle className="text-lg">Кружка с формулами</CardTitle>
                   <div className="text-2xl font-bold text-secondary">650₽</div>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full" variant="outline">Заказать</Button>
+                  <Button className="w-full hover-glow" variant="outline">Заказать</Button>
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale">
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.3s'}}>
                 <div className="h-48 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-t-xl flex items-center justify-center">
-                  <span className="text-6xl">👕</span>
+                  <span className="text-6xl animate-bounce-in" style={{animationDelay: '0.5s'}}>👕</span>
                 </div>
                 <CardHeader>
                   <CardTitle className="text-lg">Футболка ЛОМ</CardTitle>
                   <div className="text-2xl font-bold text-accent">1200₽</div>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full" variant="outline">Заказать</Button>
+                  <Button className="w-full hover-glow" variant="outline">Заказать</Button>
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale">
+              <Card className="hover-lift hover-glow animate-slide-up" style={{animationDelay: '0.4s'}}>
                 <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-xl flex items-center justify-center">
-                  <span className="text-6xl">📓</span>
+                  <span className="text-6xl animate-bounce-in" style={{animationDelay: '0.6s'}}>📓</span>
                 </div>
                 <CardHeader>
                   <CardTitle className="text-lg">Блокнот для задач</CardTitle>
                   <div className="text-2xl font-bold text-primary">450₽</div>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full" variant="outline">Заказать</Button>
+                  <Button className="w-full hover-glow" variant="outline">Заказать</Button>
                 </CardContent>
               </Card>
             </div>
@@ -602,9 +613,9 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="hover-scale cursor-pointer">
+              <Card className="hover-lift hover-glow cursor-pointer animate-slide-up" style={{animationDelay: '0.1s'}}>
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 animate-bounce-in" style={{animationDelay: '0.3s'}}>
                     <Icon name="Phone" size={32} className="text-primary" />
                   </div>
                   <h3 className="font-semibold mb-2">Телефон</h3>
@@ -612,9 +623,9 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale cursor-pointer">
+              <Card className="hover-lift hover-glow cursor-pointer animate-slide-up" style={{animationDelay: '0.2s'}}>
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4 animate-bounce-in" style={{animationDelay: '0.4s'}}>
                     <Icon name="Send" size={32} className="text-accent" />
                   </div>
                   <h3 className="font-semibold mb-2">Telegram</h3>
@@ -622,9 +633,9 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="hover-scale cursor-pointer">
+              <Card className="hover-lift hover-glow cursor-pointer animate-slide-up" style={{animationDelay: '0.3s'}}>
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-4 animate-bounce-in" style={{animationDelay: '0.5s'}}>
                     <Icon name="MessageCircle" size={32} className="text-secondary" />
                   </div>
                   <h3 className="font-semibold mb-2">WhatsApp</h3>
