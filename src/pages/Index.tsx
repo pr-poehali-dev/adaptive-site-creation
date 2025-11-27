@@ -28,16 +28,12 @@ const Index = () => {
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
-                <span className="text-2xl font-bold text-white">∑</span>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  ЛОМ
-                </h1>
-                <p className="text-xs text-muted-foreground">Любители Олимпиадной Математики</p>
-              </div>
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.poehali.dev/files/e3811560-6f8a-494e-8a65-7ed67863c0b3.PNG" 
+                alt="ЛОМ Логотип" 
+                className="h-14 w-auto"
+              />
             </div>
             <div className="hidden md:flex items-center gap-6">
               <button onClick={() => scrollToSection("home")} className="text-sm font-medium hover:text-primary transition">
@@ -644,13 +640,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                <span className="text-2xl font-bold">∑</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-xl">ЛОМ</h3>
-                <p className="text-sm opacity-90">Любители Олимпиадной Математики</p>
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/files/e3811560-6f8a-494e-8a65-7ed67863c0b3.PNG" 
+                alt="ЛОМ Логотип" 
+                className="h-16 w-auto bg-white/90 rounded-lg px-2 py-1"
+              />
             </div>
             <div className="text-center md:text-right">
               <p className="text-sm opacity-90">© 2024 Кружок ЛОМ. Все права защищены.</p>
